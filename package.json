@@ -1,0 +1,30 @@
+{
+  "name": "requests",
+  "version": "1.0.0",
+  "description": "send http requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "zed": "bin/zed"
+  },
+  "logs": {
+    "error": "error",
+    "debug": "debug"
+  },
+  "author": "zed",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "mqtt": "^2.18.8",
+    "ora": "^3.4.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "simple-oauth2": "^2.2.1",
+    "uuid": "^3.3.2",
+    "websocket": "^1.0.28",
+    "yaml": "^1.5.0",
+    "yargs": "^13.2.2"
+  }
+}
