@@ -1,0 +1,17 @@
+{
+  "method": "post",
+  "uri": "{uri}devices/{deviceID}/actions",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "action": "brightnessIncrease",
+    "payload": {
+      "brightness": 500,
+      "description": "increase brightness"
+    }
+  },
+  "json": true
+}

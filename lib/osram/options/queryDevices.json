@@ -1,0 +1,13 @@
+{
+  "method": "get",
+  "uri": "{uri}devices",
+  "qs": {
+    "tags": "light",
+    "deviceTypeId": "{deviceTypeID}"
+  },
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  }
+}

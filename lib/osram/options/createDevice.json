@@ -1,0 +1,21 @@
+{
+  "method": "post",
+  "uri": "{uri}devices",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "info": {
+      "name": "Dali 1",
+      "deviceTypeId": "{daliDTID}",
+      "description": " My dali 1",
+      "installationTimestamp": "2018-06-05T08:23:10.370Z",
+      "tags": [
+        "light"
+      ]
+    }
+  },
+  "json": true
+}

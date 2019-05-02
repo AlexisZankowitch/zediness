@@ -1,0 +1,14 @@
+{
+  "methode": "post",
+  "uri": "{uri}id/auth/realms/olt/protocol/openid-connect/token",
+  "headers": {
+    "tenant": "{test_az_concept}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  "formData": {
+    "grant_type": "client_credentials",
+    "client_id": "{zed-lightelligence_auth_client_id}",
+    "client_secret": "{zed-lightelligence_auth_client_secret}"
+  }
+}

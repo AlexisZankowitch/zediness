@@ -1,0 +1,8 @@
+{
+  "uri": "{uri}users/{userID}/tenants",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  }
+}

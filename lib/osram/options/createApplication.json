@@ -1,0 +1,22 @@
+{
+  "method": "post",
+  "uri": "{uri}application-developer/applications",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "name": "zed-lightelligence",
+    "allowedTenants": [
+      {
+        "tenantId": "{test_az_concept}",
+        "comment": "Tenant concept, test purposes"
+      }
+    ],
+    "redirectUris": [
+      "https://my.zed.domain/auth/callback"
+    ]
+  },
+  "json": true
+}

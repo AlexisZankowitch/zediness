@@ -1,0 +1,9 @@
+{
+  "method": "put",
+  "uri": "{uri}applications/{zed-lightelligence_id}/installation",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  }
+}

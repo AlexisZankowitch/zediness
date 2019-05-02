@@ -1,0 +1,22 @@
+{
+  "method": "post",
+  "uri": "{uri}devices/streaming-connections",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "filter": {
+      "type": [
+        "attributeUpdate",
+        "eventUpdate",
+        "configurationUpdate"
+      ],
+      "deviceId": [
+        "{dali1ID}"
+      ]
+    }
+  },
+  "json": true
+}

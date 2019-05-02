@@ -1,0 +1,32 @@
+{
+  "method": "post",
+  "uri": "{uri}device-types",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "name": "Test toto",
+    "manufacturer": "Reply",
+    "model": "V1",
+    "description": "coucou",
+    "schema": {
+      "configuration": {
+        "brightness": {
+          "type": "number"
+        },
+        "hue": {
+          "type": "object",
+          "properties": {
+            "r": { "type": "number" },
+            "g": { "type": "number" },
+            "b": { "type": "number" }
+          }
+        }
+      },
+      "attributes": {}
+    }
+  },
+  "json": true
+}

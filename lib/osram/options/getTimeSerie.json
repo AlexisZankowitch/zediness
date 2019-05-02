@@ -1,0 +1,16 @@
+{
+  "method": "get",
+  "uri": "{uri}devices/{dali1}/aggregated-timeseries",
+  "qs": {
+    "startTime": "",
+    "endTime": "",
+    "frameSize": "",
+    "aggregation": "",
+    "path": ""
+  },
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  }
+}
