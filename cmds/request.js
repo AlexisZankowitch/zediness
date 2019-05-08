@@ -12,6 +12,7 @@ class Request extends CMD{
         this.service    = args.service  || args.s
         this.options    = args.options  || args.o
         this.token      = args.token    || args.t
+        this.fish       = args.fish     || args.f
         if (typeof this.token === 'undefined') {
             this.logger.e('Token is undefined', this.token)
             process.exit(1)
@@ -33,7 +34,7 @@ class Request extends CMD{
         this.logger.d('Configuration', config)
         
         // parametize token
-        if (option.headers) option.headers.Authorization.replace('token', this.token) 
+        if (option.headers) option.headers.Authorization = option.headers.Authorization.replace('token', this.token) 
         this.__replaceOption(option, config, this.__replaceString, this)
 
         this.logger.d('request to send', option)
@@ -43,6 +44,10 @@ class Request extends CMD{
             .then(data => {
                 __spinner.succeed(`Success, logs: ${process.env.base_dir}/logs.log`)
                 this.logger.i('Request success', data)
+                // print data if user wants to fish
+                if (this.fish) {
+                    this.logger.print(JSON.parse(data))
+                }
                 process.exit(0)
             })
             .catch(err => {

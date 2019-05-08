@@ -15,6 +15,7 @@ const menus = {
     --serice, -s ...... Service where to find the options (inside lib),
     --options, -o ..... JSON file describing the request to send,
     --token, -t ....... Unique token identifier (should be declared in conf of your service)
+    --fish, -f ........ Print the request result on the console
     --talk ............ [Flag] Print traces`,
 
     mqtt: `
