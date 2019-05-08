@@ -1,0 +1,18 @@
+{
+    "method": "post",
+    "uri": "{uri}tenants/{concept_tenant}/invites",
+    "headers": {
+        "Authorization": "Bearer {token}",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json"
+    },
+    "body": {
+        "receiverEmail": "your@email.com",
+        "roles": [
+            {
+                "id": "id"
+            }
+        ]
+    },
+    "json": true
+}

@@ -1,5 +1,5 @@
 const menus = {
-  main: `
+    main: `
     zed [command] <options>
 
     request ............ send http request using rpn
@@ -7,16 +7,17 @@ const menus = {
     version ............ show package version
     help ............... show help menu for a command`,
 
-  request: `
+    request: `
     zed request <options>
 
     You must have an conf.yaml inside your service folder
     
     --serice, -s ...... Service where to find the options (inside lib),
     --options, -o ..... JSON file describing the request to send,
+    --token, -t ....... Unique token identifier (should be declared in conf of your service)
     --talk ............ [Flag] Print traces`,
 
-  mqtt: `
+    mqtt: `
     zed mqtt <options>
     
     use mqtt npm package
@@ -29,7 +30,7 @@ const menus = {
 }
 
 module.exports = (args) => {
-  const subCmd = args._[0] === 'help' ? args._[1] : args._[0]
-  console.log(menus[subCmd] || menus.main)
-  process.exit(0)
+    const subCmd = args._[0] === 'help' ? args._[1] : args._[0]
+    console.log(menus[subCmd] || menus.main)
+    process.exit(0)
 }
