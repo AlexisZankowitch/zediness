@@ -1,0 +1,14 @@
+{
+    "method": "post",
+    "uri": "https://id.lightelligence.io/v1/id/auth/realms/olt/protocol/openid-connect/token",
+    "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "tenant": "{rzb_tenant}"
+    },
+    "form": {
+        "client_id": "{pmd-test_client_id}",
+        "client_secret": "{pmd-test_secret}",
+        "grant_type": "client_credentials"
+    },
+    "json": true
+}

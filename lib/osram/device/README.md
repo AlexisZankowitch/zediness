@@ -8,3 +8,7 @@ openssl ecparam -out device_key.pem -name prime256v1 -genkey
 ```
 openssl req -new -key device_key.pem -x509 -days 365 -out device_cert.pem -subj '/O=My-Tenant/CN=My-Device'
 ```
+### Verify the Device Certificate
+```
+openssl x509 -in device_cert.pem -noout -text
+```

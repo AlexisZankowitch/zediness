@@ -7,15 +7,15 @@
     "Content-Type": "application/json"
   },
   "body": {
-    "name": "zed-lightelligence",
+    "name": "PMD-test",
     "allowedTenants": [
       {
-        "tenantId": "{test_az_concept}",
-        "comment": "Tenant concept, test purposes"
+        "tenantId": "{concept_tenant}",
+        "comment": "test test 1 2 1 2"
       }
     ],
     "redirectUris": [
-      "https://my.zed.domain/auth/callback"
+      "https://www.google.com"
     ]
   },
   "json": true

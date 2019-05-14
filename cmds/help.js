@@ -5,7 +5,10 @@ const menus = {
     request ............ send http request using rpn
     mqtt ............... mqtt
     version ............ show package version
-    help ............... show help menu for a command`,
+    help ............... show help menu for a command
+    
+    --clear clear log file
+    --talk ............ [Flag] Print traces`,
 
     request: `
     zed request <options>
@@ -16,7 +19,7 @@ const menus = {
     --options, -o ..... JSON file describing the request to send,
     --token, -t ....... Unique token identifier (should be declared in conf of your service)
     --fish, -f ........ Print the request result on the console
-    --talk ............ [Flag] Print traces`,
+    `,
 
     mqtt: `
     zed mqtt <options>

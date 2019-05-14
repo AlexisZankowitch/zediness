@@ -1,0 +1,9 @@
+{
+    "method": "get",
+    "uri": "{uri}application-developer/applications/{pmd-test_id}/allowed-tenants",
+    "headers": {
+        "Authorization": "Bearer {token}",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json"
+    }
+}

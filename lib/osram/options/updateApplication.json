@@ -1,0 +1,15 @@
+{
+    "method": "patch",
+    "uri": "{uri}application-developer/applications/{app_zed}",
+    "headers": {
+        "Authorization": "Bearer {token}",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json"
+    },
+    "body": {
+        "redirectUris": [
+            "https://www.google.com"
+        ]
+    },
+    "json": true
+}

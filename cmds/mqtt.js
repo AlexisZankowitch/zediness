@@ -31,9 +31,9 @@ class MQTT extends CMD{
             url = URL.parse(`${this.config.mqtt.protocol}://${this.config.mqtt.uri}:${this.config.mqtt.port}`)
             opts = {
                 rejectUnauthorized: true,
-                ca: FS.readFileSync(`${process.env.base_dir}/lib/osram/olt_ca.pem`),
-                cert: FS.readFileSync(`${process.env.base_dir}/lib/osram/device/${this.device}_cert.pem`),
-                key: FS.readFileSync(`${process.env.base_dir}/lib/osram/device/${this.device}_key.pem`)
+                ca: FS.readFileSync(`${process.env.base_dir}/lib/osram/olt_ca.pem`, 'utf8'),
+                cert: FS.readFileSync(`${process.env.base_dir}/lib/osram/device/${this.device}_cert.pem`, 'utf8'),
+                key: FS.readFileSync(`${process.env.base_dir}/lib/osram/device/${this.device}_key.pem`, 'utf8')
             }
         } catch (error) {
             this.logger.e('Error when trying to read Configuration', error.toString())

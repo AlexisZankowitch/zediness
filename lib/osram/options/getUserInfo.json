@@ -1,0 +1,9 @@
+{
+    "method": "get",
+    "uri": "https://id.lightelligence.io/v1/id/auth/realms/olt/protocol/openid-connect/userinfo",
+    "headers": {
+        "Authorization": "Bearer {token}",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json"
+    }
+}

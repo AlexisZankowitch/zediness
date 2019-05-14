@@ -1,0 +1,9 @@
+{
+    "method": "put",
+    "uri": "{uri}application-developer/applications/{pmd-test_id}/allowed-tenants/{rzb_tenant}",
+    "headers": {
+        "Authorization": "Bearer {token}",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json"
+    }
+}

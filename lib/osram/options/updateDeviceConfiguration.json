@@ -1,0 +1,19 @@
+{
+  "method": "patch",
+  "uri": "{uri}device-types/{dali_pro_dt}",
+  "headers": {
+    "Authorization": "Bearer {token}",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "schema": {
+      "configuration": {
+        "brightness": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "json": true
+}

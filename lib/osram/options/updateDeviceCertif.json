@@ -1,13 +1,13 @@
 {
   "method": "post",
-  "uri": "{uri}devices/{dali1ID}/certificates",
+  "uri": "{uri}devices/{mDali1}/certificates",
   "headers": {
     "Authorization": "Bearer {token}",
     "Cache-Control": "no-cache",
     "Content-Type": "application/json"
   },
   "body": {
-    "cert": "{dali1_cert}",
+    "cert": "{mDali1_cert}",
     "status": "valid"
   },
   "json": true

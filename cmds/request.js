@@ -13,10 +13,7 @@ class Request extends CMD{
         this.options    = args.options  || args.o
         this.token      = args.token    || args.t
         this.fish       = args.fish     || args.f
-        if (typeof this.token === 'undefined') {
-            this.logger.e('Token is undefined', this.token)
-            process.exit(1)
-        } 
+
         this.__handle()
     }
 
@@ -34,7 +31,7 @@ class Request extends CMD{
         this.logger.d('Configuration', config)
         
         // parametize token
-        if (option.headers) option.headers.Authorization = option.headers.Authorization.replace('token', this.token) 
+        if (option.hasOwnProperty('headers') && option.headers.hasOwnProperty('Authorization')) option.headers.Authorization = option.headers.Authorization.replace('token', this.token) 
         this.__replaceOption(option, config, this.__replaceString, this)
 
         this.logger.d('request to send', option)
@@ -46,7 +43,11 @@ class Request extends CMD{
                 this.logger.i('Request success', data)
                 // print data if user wants to fish
                 if (this.fish) {
-                    this.logger.print(JSON.parse(data))
+                    try {
+                        this.logger.print((typeof data === 'string') ? JSON.parse(data) : data)
+                    } catch (error) {
+                        console.log('Something went wrong....', error.toString())
+                    }
                 }
                 process.exit(0)
             })
@@ -86,7 +87,10 @@ class Request extends CMD{
             for (const conf in config) {
                 switch (config[conf].type) {
                 case 'file':
-                    parent[str] = parent[str].replace('{' + conf + '}', FS.readFileSync(`${process.env.base_dir}/lib/${self.service}/${config[conf].value}`).toString('utf8'))
+                    parent[str] = parent[str].replace(
+                        '{' + conf + '}',
+                        FS.readFileSync(`${process.env.base_dir}/lib/${self.service}/${config[conf].value}`)
+                            .toString('utf8'))
                     break
                 case 'string':
                     parent[str] = parent[str].replace('{' + conf + '}', config[conf].value)

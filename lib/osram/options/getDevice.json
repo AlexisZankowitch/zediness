@@ -1,0 +1,9 @@
+{
+    "method": "get",
+    "uri": "{uri}devices/{ds_d_id}",
+    "headers": {
+        "Authorization": "Bearer {token}",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json"
+    }
+}

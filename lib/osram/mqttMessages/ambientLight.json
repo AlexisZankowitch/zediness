@@ -1,0 +1,10 @@
+{
+    "type": "attributes",
+    "value": {
+        "ambientLight": {
+            "r": 100,
+            "g": 159,
+            "b": 200
+        }
+    }
+}
